@@ -66,3 +66,57 @@
     font-size: 1rem;
     text-transform: uppercase;
 }
+
+.card__audioplayer .card-img {
+    width: 56px;
+    height: 56px;
+}
+
+.card__audioplayer {
+    background-color: var(--black-light);
+}
+
+.progress {
+    height: 5px !important;
+}
+
+.seconds--start {
+    left: 0;
+    bottom: 0;
+    transform: translateY(50%);
+}
+.seconds--end {
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.card__audioplayer {
+    max-width: 320px !important;
+}
+
+/* dispositivi mobili (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+    .container--album-pic {
+        max-width: 200px;
+    }
+
+    .album-title::before {
+        content: '';
+    }
+
+    .album-title {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* dispositivi tablet  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* regole per il tablet qui */
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    /* regole per il desktop qui */
+}
