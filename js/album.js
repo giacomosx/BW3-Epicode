@@ -2,7 +2,7 @@
 function loadAlbumDetails() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const albumId = urlParams.get('id');
+    const albumId = urlParams.get('id') || '302127'; // ho messo un id di default giusto per avere qualcosa -- @g
   
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       .then(response => response.json())
