@@ -1,7 +1,68 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root {
     --black: #000;
     --black-light: #181818;
-    --black-gradient-top: #222222;
     --gray: #2C2C2C;
     --green: #41D760;
+}
+
+.container--album-preview {
+    background-color: #D3B64B
+}
+
+
+.navbar--playlists {
+    border-top: 1px solid var(--gray) ;
+}
+
+.text--green {
+    color: var(--green);
+}
+
+.bg--green {
+    background-color: var(--green);
+}
+
+.bg--spotify-gradient {
+    background: rgb(80,28,242);
+    background: -moz-linear-gradient(120deg, rgba(80,28,242,1) 17%, rgba(136,130,229,1) 55%, rgba(180,213,219,1) 100%);
+    background: -webkit-linear-gradient(120deg, rgba(80,28,242,1) 17%, rgba(136,130,229,1) 55%, rgba(180,213,219,1) 100%);
+    background: linear-gradient(120deg, rgba(80,28,242,1) 17%, rgba(136,130,229,1) 55%, rgba(180,213,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#501cf2",endColorstr="#b4d5db",GradientType=1);
+}
+
+.container--trakslist {
+    background: rgb(18,18,18);
+    background: -moz-linear-gradient(0deg, rgba(18,18,18,1) 70%, rgba(18,18,18,1) 85%, rgba(229,198,83,0.9) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(18,18,18,1) 70%, rgba(18,18,18,1) 85%, rgba(229,198,83,0.9) 100%);
+    background: linear-gradient(0deg, rgba(18,18,18,1) 70%, rgba(18,18,18,1) 85%, rgba(229,198,83,0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#e5c653",GradientType=1);
+}
+
+
+.container--audioplayer {
+    background-color: var(--black-light);
+}
+
+
+.icon__container--bookmark {
+    background-color: #004537;
+}
+
+.icon--heart {
+    color: #E2E3E5;
+} 
+
+
+.profile-pic {
+    width: 26px;
+    height: 26px;
+}
+
+.album-title::before {
+    content: 'Album';
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
 }

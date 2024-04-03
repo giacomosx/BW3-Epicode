@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="d-none d-md-block col-md-3 bg-black min-vh-100 ">
+                <div class="dot-icon__container text-white fs-4 ">
+                    <i class="bi bi-three-dots"></i>
+                </div>
+                <nav class="navbar navbar--menu">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link link-secondary fw-medium  icon-link "><ion-icon class="pe-3 fs-4 " name="home-outline"></ion-icon>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./results.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="search-sharp"></ion-icon>Cerca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./playlists.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="library-outline"></ion-icon>La tua libreria</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="navbar navbar--custom">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
+                                <span class="d-flex justify-content-center align-items-center bg-secondary-subtle p-1 rounded-1 me-3 "><ion-icon class="fs-5" name="add"></ion-icon></span>    Crea playlist
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
+                                <span class="d-flex justify-content-center align-items-center bg--spotify-gradient p-1 rounded-1 me-3 "><ion-icon class="fs-5 icon--heart" name="heart"></ion-icon></span>    Brani che piacciono
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
+                                <span class="d-flex justify-content-center align-items-center  p-1 rounded-1 me-3 icon__container--bookmark"><ion-icon class="fs-5 text--green" name="bookmark"></ion-icon></span>    I tuoi episodi
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="navbar navbar--playlists  ">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-secondary ">Playlist </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-12 col-md-9 col-lg-7 px-0 bg-black ">
+                <section class="container--album-preview ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="navbar px-2 ">
+                                <div class="container_btn--navigation">
+                                    <button class="btn fs-2 p-0  "><ion-icon name="chevron-back-circle"></ion-icon></button>
+                                    <button class="btn fs-2 p-0 opacity-75 "><ion-icon name="chevron-forward-circle"></ion-icon></button>
+                                </div>
+                                <div class="container--profile-pic bg-black rounded-pill px-1  bg-opacity-75 ">
+                                    <img src="https://placebeard.it/640/480" alt="" class="img-fluid rounded-circle profile-pic object-fit-cover ">
+                                    <span class="text-white px-2 username small">SexyUser67</span>
+                                    <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
+                                </div>
+                            </div>
+                            <section class=" container--album-info d-flex px-3 mt-5">
+                                <div class="row align-items-center ">
+                                    <div class="col-3">
+                                        <div class="container--album-pic shadow-lg ">
+                                            <img src="./assets/album-provv.png" alt="" class="img-fluid w-100 h-100 object-fit-cover ">
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <h2 class="display-3 text-white fw-bold album-title">Gioventù Bruciata</h2>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <section class="container--trakslist h-100 ">
+                    
+                </section>
+            </main>
+            <aside class="d-none d-lg-block  col-lg-2 bg-black min-vh-100 ">
+
+            </aside>
+        </div>
+    </div>
+    <div class="container--audioplayer fixed-bottom py-4  ">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
