@@ -72,8 +72,8 @@
                     </ul>
                 </nav>
             </aside>
-            <main class="col-12 col-md-9 col-lg-7 px-0 bg-black vh-100 overflow-y-scroll overflow-x-hidden  ">
-                <section class="container--album-preview ">
+            <main class="col-12 col-md-9 col-lg-7 p-0 bg-black vh-100 overflow-y-scroll overflow-x-hidden  ">
+                <section class="container container--album-preview ">
                     <div class="row">
                         <div class="col-12">
                             <div class="navbar px-2 ">
@@ -87,7 +87,7 @@
                                     <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
                                 </div>
                             </div>
-                            <section class=" container--album-info d-flex px-3 mt-md-5">
+                            <section class=" container--album-info d-flex px-3 mt-md-5 pb-3">
                                 <div class="row align-items-center ">
                                     <div class="col-12 col-md-3 d-flex justify-content-center ">
                                         <div class="container--album-pic shadow-lg ">
@@ -102,8 +102,41 @@
                         </div>
                     </div>
                 </section>
-                <section class="container--trakslist h-100 ">
-                    
+                <section class="container container--trakslist h-100">
+                    <div class="row py-4 px-3">
+                        <div class="col-12">
+                            <div class="container__btn--top d-flex align-items-center gap-3 ">
+                                <button class="bg--green btn"><ion-icon class="text-black fs-2 h-100 " name="play"></ion-icon></button>
+                                <button class="btn text-white p-0"><ion-icon class="fs-2 text-white-50" name="heart-outline"></ion-icon></button>
+                                <button class="btn text-white p-0"><ion-icon class="fs-2 text-white-50" name="arrow-down-circle-outline"></ion-icon></button>
+                                <button class="btn text-white p-0"><i class="bi bi-three-dots fs-2 text-white-50 "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table class="table table-borderless table small">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-white-50 fw-light " scope="col">#</th>
+                                        <th class="text-white-50 fw-light " scope="col">TITOLO</th>
+                                        <th class="text-white-50 fw-light " scope="col">RIPRODUZIONI</th>
+                                        <th class="text-white-50 fw-light " scope="col"><ion-icon name="time-outline"></ion-icon></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th class="text-white-50 fw-light " scope="row">1</th>
+                                        <td>Titolo</td>
+                                        <td>xxx</td>
+                                        <td>1.450</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <aside class="d-none d-lg-block  col-lg-2 bg-black min-vh-100">
@@ -130,11 +163,11 @@
             <div class="d-none d-md-block col-12 col-lg-6">
                 <div class="mb-lg-3  audioplayer justify-content-center d-flex flex-column align-items-center px-5 position-relative mb-3 ">
                     <div class="audioplayer__wrapper-btn d-flex gap-3">
-                        <button class="btn p-0 btn--shuffle"><ion-icon class="fs-2 text--green" name="shuffle-outline"></ion-icon></button>
-                        <button class="btn p-0 btn--prev"><ion-icon class="fs-2 text-white-50 " name="play-skip-back"></ion-icon></button>
+                        <button class="btn p-0 btn--shuffle"><ion-icon class="fs-4 text--green" name="shuffle-outline"></ion-icon></button>
+                        <button class="btn p-0 btn--prev"><ion-icon class="fs-4 text-white-50 " name="play-skip-back"></ion-icon></button>
                         <button class="btn p-0 btn--play"><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
-                        <button class="btn p-0 btn--next"><ion-icon class="fs-2 text-white-50  " name="play-skip-forward"></ion-icon></button>
-                        <button class="btn p-0 btn--repeat"><ion-icon class="fs-2 text--green" name="repeat-outline"></ion-icon></button>
+                        <button class="btn p-0 btn--next"><ion-icon class="fs-4 text-white-50  " name="play-skip-forward"></ion-icon></button>
+                        <button class="btn p-0 btn--repeat"><ion-icon class="fs-4 text--green" name="repeat-outline"></ion-icon></button>
                     </div>
                     <div class="progress w-100 bg-secondary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                         <span class="seconds--start text-secondary position-absolute ">0.58</span>
