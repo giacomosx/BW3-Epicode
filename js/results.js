@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const searchBar = document.getElementById('searchBar');
     const searchButton = document.getElementById('searchButton');
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const resultsContainer = document.querySelector('.results');
                 resultsContainer.innerHTML = '';
                 data.data.forEach(track => {
-                    // per ogni traccia crea un elemento html con link cliccabili, da accompagnare al css e allo stile della pagina
+                    // per ogni traccia crea un elemento html con link cliccabili, da accompagnare all'eventuale css e allo stile della pagina
                     const trackElement = document.createElement('div');
                     trackElement.classList.add('track', 'text-white');
                     trackElement.innerHTML = `
