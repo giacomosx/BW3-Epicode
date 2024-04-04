@@ -1,0 +1,25 @@
+
+.results a {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+}
+
+.results a {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+.results a:hover, .results a:focus {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.results {
+    z-index: 2;
+    position: relative;
+}
+
+.some-overlay-class {
+    z-index: 0;
+}
