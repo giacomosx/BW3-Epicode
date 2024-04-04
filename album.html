@@ -20,13 +20,13 @@
                 <nav class="navbar navbar--menu">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link link-secondary fw-medium  icon-link "><ion-icon class="pe-2 fs-4 " name="home-outline"></ion-icon>Home</a>
+                            <a href="./index.html" class="nav-link link-secondary fw-medium  icon-link "><ion-icon class="pe-3 fs-4 " name="home-outline"></ion-icon>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./results.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-2 fs-4 " name="search-sharp"></ion-icon>Cerca</a>
+                            <a href="./results.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="search-sharp"></ion-icon>Cerca</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./playlists.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-2 fs-4 " name="library-outline"></ion-icon>La tua libreria</a>
+                            <a href="./playlists.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="library-outline"></ion-icon>La tua libreria</a>
                         </li>
                     </ul>
                 </nav>
@@ -34,17 +34,17 @@
                     <ul class="navbar-nav ">
                         <li class="nav-item">
                             <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
-                                <span class="d-flex justify-content-center align-items-center bg-secondary-subtle p-1 rounded-1 me-2 "><ion-icon class="fs-5" name="add"></ion-icon></span>    Crea playlist
+                                <span class="d-flex justify-content-center align-items-center bg-secondary-subtle p-1 rounded-1 me-3 "><ion-icon class="fs-5" name="add"></ion-icon></span>    Crea playlist
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
-                                <span class="d-flex justify-content-center align-items-center bg--spotify-gradient p-1 rounded-1 me-2 "><ion-icon class="fs-5 icon--heart" name="heart"></ion-icon></span>    Brani che ti piacciono
+                                <span class="d-flex justify-content-center align-items-center bg--spotify-gradient p-1 rounded-1 me-3 "><ion-icon class="fs-5 icon--heart" name="heart"></ion-icon></span>    Brani che ti piacciono
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="disabled nav-link link-secondary fw-medium d-flex align-items-center ">
-                                <span class="d-flex justify-content-center align-items-center  p-1 rounded-1 me-2 icon__container--bookmark"><ion-icon class="fs-5 text--green" name="bookmark"></ion-icon></span>    I tuoi episodi
+                                <span class="d-flex justify-content-center align-items-center  p-1 rounded-1 me-3 icon__container--bookmark"><ion-icon class="fs-5 text--green" name="bookmark"></ion-icon></span>    I tuoi episodi
                             </a>
                         </li>
                     </ul>
@@ -72,7 +72,7 @@
                     </ul>
                 </nav>
             </aside>
-            <main class="col-12 col-md-9 col-lg-7 px-0 bg-black vh-100 overflow-y-scroll ">
+            <main class="col-12 col-md-9 col-lg-7 px-0 bg-black vh-100 overflow-y-scroll overflow-x-hidden  ">
                 <section class="container--album-preview ">
                     <div class="row">
                         <div class="col-12">
@@ -129,7 +129,7 @@
             </div>
             <div class="d-none d-md-block col-12 col-lg-6">
                 <div class="mb-lg-3  audioplayer justify-content-center d-flex flex-column align-items-center px-5 position-relative mb-3 ">
-                    <div class="audioplayer__wrapper-btn d-flex gap-3 py-2 ">
+                    <div class="audioplayer__wrapper-btn d-flex gap-3">
                         <button class="btn p-0 btn--shuffle"><ion-icon class="fs-2 text--green" name="shuffle-outline"></ion-icon></button>
                         <button class="btn p-0 btn--prev"><ion-icon class="fs-2 text-white-50 " name="play-skip-back"></ion-icon></button>
                         <button class="btn p-0 btn--play"><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
@@ -144,17 +144,15 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="audioplayer__wrapper-btn--settings d-flex ">
-                    <button class="btn p-0 text-white "><ion-icon name="mic-outline"></ion-icon></button>
-                    <button class="btn p-0 text-white "></button>
-                    <button class="btn p-0 text-white "></button>
-                    <button class="btn p-0 text-white "></button>
-                    <div>
-                        <div class="progress w-100 " role="progressbar">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
+                <div class="audioplayer__wrapper-btn--settings d-flex align-items-center gap-2 justify-content-end ">
+                    <button class="btn p-0 text-secondary  "><i class="bi bi-mic"></i></button>
+                    <button class="btn p-0 text-secondary  "><i class="bi bi-menu-button-wide"></i></button>
+                    <button class="btn p-0 text-secondary  "><i class="bi bi-speaker"></i></button>
+                    <button class="btn p-0 text-secondary  "><i class="bi bi-volume-up"></i></button>
+                    <div class="progress bg-secondary" role="progressbar">
+                        <div class="progress-bar bg-white " style="width: 90%;"></div>
                     </div>
-                    <button class="btn p-0 "></button>
+                    <button class="btn p-0 text-secondary   "><i class="bi bi-arrows-fullscreen"></i></button>
                 </div>
             </div>
         </div>

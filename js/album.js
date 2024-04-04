@@ -20,5 +20,5 @@ function loadAlbumDetails() {
       });
   }
   
-  document.addEventListener('DOMContentLoaded', loadAlbumDetails);
+  //document.addEventListener('DOMContentLoaded', loadAlbumDetails);
   
