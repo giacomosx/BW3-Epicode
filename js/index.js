@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomArtists = ['muse', 'coldplay', 'radiohead', 'queen', 'nirvana', 'pink floyd', 'led zeppelin', 'the beatles', 'the rolling stones', 'the doors'];
     let usedArtists = []; // tiene traccia degli artisti "usati"
   
-    function getRandomArtistWithoutRepeat() { // dovrebbe selezionare un artista a caso che non è stato già selezionato ma per ora non
+    function getRandomArtistWithoutRepeat() { // dovrebbe selezionare un artista a caso che non è stato già selezionato ma per ora non funge
       let randomIndex;
       do {
         randomIndex = Math.floor(Math.random() * randomArtists.length);
