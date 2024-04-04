@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(29, 29, 29);
+    
+}
+
+.sectionOne{
+background-color: black;
+}
+
+.searchBar{
+    font-size: small;
+}
+
+ul{
+    list-style: none;
+}
+
+.favouritesList{
+    font-size: x-small;
+}
+
+.friendsPick{
+    width: 22px;
+    height: 22px;
+}
+
+.friendsName{
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+}
+
+.favouriteName{
+    font-size: xx-small;
+    color: rgb(155, 155, 155);
+}
