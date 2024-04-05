@@ -33,18 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             const section = document.querySelector(selector);
+            let row = selector === '.buonasera-content';
             section.innerHTML = '';
   
-            const limitedAlbums = data.data.slice(0, 6); // limite album visualizzati
+            const limitedAlbums = data.data.slice(0, 8); // limite album visualizzati
             limitedAlbums.forEach(album => {
                 const albumHTML = `
-                    <div class="col-md-4 mb-3">
-                        <div class="card h-100">
-                            <img src="${album.album.cover_medium}" class="card-img-top" alt="${album.album.title}">
-                            <div class="card-body">
-                                <h5 class="card-title">${album.album.title}</h5>
-                                <p class="card-text">${album.artist.name}</p>
-                                <a href="./album.html?id=${album.album.id}" class="btn btn-primary">View Album</a>
+                    <div class="col mb-3">
+                        <div class="card h-100 text-white small
+                        ${row ? 'flex-row g-0 bg--gray' : 'bg--black-light p-3'}">
+                            <div class="card-img ${row ? 'w-25' : ''}">
+                                <img src="${album.album.cover_medium}" class="card-img-top w-100 h-100 object-fit-cover 
+                                ${row ? 'rounded-start' : 'rounded'}" alt="${album.album.title}">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between ">
+                                <h6 class="card-title">${album.album.title}</h6>
+                                ${row ? '' : `<p class="card-text text-secondary ">${album.artist.name}</p>`}
+                                <a href="./album.html?id=${album.album.id}" class="btn text-black bg--green">View</a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const limitedAlbums = data.data.slice(0, 6); // limite album visualizzati
     albums.slice(0, limit).forEach(album => {
         const albumHTML = `
-            <div class="col-md-4 mb-3">
+            <div class="col mb-3">
                 <div class="card h-100">
                     <img src="${album.album.cover_medium}" class="card-img-top" alt="${album.album.title}">
                     <div class="card-body">

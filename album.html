@@ -7,6 +7,7 @@
     <title>Spotify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -72,8 +73,15 @@
                     </ul>
                 </nav>
             </aside>
-            <main class="col-12 col-md-9 col-lg-7 p-0 bg-black vh-100 overflow-y-scroll overflow-x-hidden  ">
-                <section class="container container--album-preview ">
+            <main class="col-12 col-md-9 col-lg-7 p-0 bg--black-light vh-100 overflow-y-scroll overflow-x-hidden pb-5 ">
+                
+                <div class="spinner-container w-100 justify-content-center  d-flex align-items-center h-75">
+                    <div class="spinner-grow" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                
+                <section class=" container--album-preview w-100 d-none">
                     <div class="row">
                         <div class="col-12">
                             <div class="navbar px-2 ">
@@ -87,7 +95,7 @@
                                     <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
                                 </div>
                             </div>
-                            <section class=" container--album-info d-flex px-3 mt-md-5 pb-3">
+                            <section class="container--album-info d-flex px-3 mt-md-5 pb-3">
                                 <div class="row align-items-center ">
                                     <div class="col-12 col-md-3 d-flex justify-content-center ">
                                         <div class="container--album-pic shadow-lg ">
@@ -102,7 +110,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="container container--trakslist h-100">
+                <section class=" container--trakslist d-none pb-5 ">
                     <div class="row py-4 px-3">
                         <div class="col-12">
                             <div class="container__btn--top d-flex align-items-center  gap-3 justify-content-between  flex-row-reverse justify-content-md-start flex-md-row ">
@@ -128,12 +136,7 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <th class="text-white-50 fw-light " scope="row">1</th>
-                                        <td>Titolo</td>
-                                        <td>xxx</td>
-                                        <td>1.450</td>
-                                      </tr>
+                                      
                                     </tbody>
                                   </table>
                             </div>
@@ -142,7 +145,58 @@
                 </section>
             </main>
             <aside class="d-none d-lg-block  col-lg-2 bg-black min-vh-100">
-
+                <section class="sectionThree bg-black text-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-end gap-4 mt-1">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                    <ion-icon name="square-outline"></ion-icon>
+                                    <ion-icon name="triangle-outline"></ion-icon>
+                                </div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <div>
+                                        <p class="">Attivitá amici</p>
+                                    </div>
+                                    <div class="d-flex pt-1 gap-2">
+                                        <ion-icon name="people-outline"></ion-icon>
+                                        <ion-icon name="triangle-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex gap-3">
+                                        <img class="friendsPick rounded-circle object-fit-cover mt-1"
+                                            src="https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png"
+                                            alt="">
+                                        <div class="friendsName">
+                                            <p class="m-0">Charlie Hookham</p>
+                                            <p>In camera yumi zouma</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <img class="friendsPick rounded-circle object-fit-cover mt-1"
+                                            src="https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png"
+                                            alt="">
+                                        <div class="friendsName">
+                                            <p class="m-0">lighdark02</p>
+                                            <p class="favouriteName">In camera yumi zouma</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <img class="friendsPick rounded-circle object-fit-cover mt-1"
+                                            src="https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png"
+                                            alt="">
+                                        <div class="friendsName">
+                                            <p class="m-0">Valeria Traverso</p>
+                                            <p>In camera yumi zouma</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </aside>
         </div>
     </div>
@@ -199,7 +253,6 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script src="./js/script.js"></script>
     <script src="./js/album.js"></script>
 </body>
 
