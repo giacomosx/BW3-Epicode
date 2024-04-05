@@ -68,6 +68,11 @@
     text-transform: uppercase;
 }
 
+tr:hover {
+    background-color: var(--gray); 
+    cursor: pointer;
+  }
+
 .card__audioplayer .card-img {
     width: 56px;
     height: 56px;
