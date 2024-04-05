@@ -221,29 +221,30 @@
                     <div class="audioplayer__wrapper-btn d-flex gap-3">
                         <button class="btn p-0 btn--shuffle"><ion-icon class="fs-4 text--green" name="shuffle-outline"></ion-icon></button>
                         <button class="btn p-0 btn--prev"><ion-icon class="fs-4 text-white-50 " name="play-skip-back"></ion-icon></button>
-                        <button class="btn p-0 btn--play"><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
+                        
+                        <!-- pulsante Play con ID btnPlay -->
+                        <button id="btnPlay" class="btn p-0 btn--play"><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
+                        
                         <button class="btn p-0 btn--next"><ion-icon class="fs-4 text-white-50  " name="play-skip-forward"></ion-icon></button>
                         <button class="btn p-0 btn--repeat"><ion-icon class="fs-4 text--green" name="repeat-outline"></ion-icon></button>
-                    </div>
-                    <div class="progress w-100 bg-secondary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <span class="seconds--start text-secondary position-absolute ">0.58</span>
-                        <div class="progress-bar bg-white" style="width: 30%"></div>
-                        <span class="seconds--end text-secondary position-absolute ">3.20</span>
-                    </div>
+                      </div>
+                      
+                      <!-- barra di progresso con ID songProgressBar -->
+                      <div class="progress bg-secondary w-100" role="progressbar" style="height: 5px;">
+                        <div id="songProgressBar" class="progress-bar bg-white" style="width: 0%;"></div>
+                      </div>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="audioplayer__wrapper-btn--settings d-flex align-items-center gap-2 justify-content-end ">
-                    <button class="btn p-0 text-secondary  "><i class="bi bi-mic"></i></button>
-                    <button class="btn p-0 text-secondary  "><i class="bi bi-menu-button-wide"></i></button>
-                    <button class="btn p-0 text-secondary  "><i class="bi bi-speaker"></i></button>
-                    <button class="btn p-0 text-secondary  "><i class="bi bi-volume-up"></i></button>
-                    <div class="progress bg-secondary" role="progressbar">
-                        <div class="progress-bar bg-white " style="width: 90%;"></div>
-                    </div>
-                    <button class="btn p-0 text-secondary   "><i class="bi bi-arrows-fullscreen"></i></button>
+                    <button class="btn p-0 text-secondary "><i class="bi bi-mic"></i></button>
+                    <button class="btn p-0 text-secondary "><i class="bi bi-menu-button-wide"></i></button>
+                    <button class="btn p-0 text-secondary "><i class="bi bi-speaker"></i></button>
+                    <!-- slider per il controllo del volume -->
+                    <input type="range" id="volumeControl" class="form-range" min="0" max="100" value="90" style="width: 100px;">
+                    <button class="btn p-0 text-secondary "><i class="bi bi-arrows-fullscreen"></i></button>
                 </div>
-            </div>
+              </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
