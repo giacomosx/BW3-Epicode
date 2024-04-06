@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentAudio = null;
   let currentPreviewUrl = null;
+  let currentIndex = 0; // indice della traccia corrente
+  const tracks = []; // array di tracce dell'album
+
   const btnPlay = document.getElementById('btnPlay');
+  const btnNext = document.querySelector('.btn--next'); // pulsante per la traccia successiva
+  const btnPrev = document.querySelector('.btn--prev'); // pulsante per la traccia precedente
   const tbody = document.querySelector('tbody');
   const volumeControl = document.getElementById('volumeControl');
+  const progressBar = document.getElementById('songProgressBar'); // barra di progresso della canzone
 
   // fetch dell'album selezionato
   function loadAlbumDetails(albumId) {
@@ -26,55 +32,84 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // popola la tabella con le tracce dell'album
-  function populateTable(tracks) {
+  function populateTable(tracksData) {
     tbody.innerHTML = '';
-    tracks.forEach((track, index) => {
+    tracks.length = 0;
+    tracksData.forEach((track, index) => {
+      tracks.push(track);
       const tr = document.createElement('tr');
       tr.setAttribute('data-preview', track.preview);
       tr.innerHTML = `
         <th class="text-white-50 fw-light" scope="row">${index + 1}</th>
         <td>${track.title}</td>
         <td>${track.rank}</td>
-        <td>${(track.duration/60).toFixed(2)}</td>
+        <td>${(track.duration / 60).toFixed(2)}</td>
       `;
       tbody.appendChild(tr);
     });
     addRowClickHandlers();
+    updateTrackSelection();
   }
 
   // aggiunge un event listener per ogni riga della tabella
   function addRowClickHandlers() {
     tbody.querySelectorAll('tr').forEach(row => {
       row.addEventListener('click', () => {
-        tbody.querySelectorAll('tr').forEach(tr => tr.classList.remove('selected-track'));
-        row.classList.add('selected-track');
         const previewUrl = row.getAttribute('data-preview');
         playPreview(previewUrl);
       });
     });
   }
 
-  // riproduce l'anteprima della traccia selezionata
+  // riproduce l'anteprima della traccia selezionata e aggiorna il nome della traccia e dell'artista + l'immagine dell'album
   function playPreview(previewUrl) {
-    if(currentAudio) {
-      currentAudio.pause();
-    }
+    if (currentAudio) currentAudio.pause();
     currentPreviewUrl = previewUrl;
-    if(previewUrl) {
-      currentAudio = new Audio(previewUrl);
-      currentAudio.play();
-      btnPlay.querySelector('ion-icon').setAttribute('name', 'pause-circle');
-      currentAudio.addEventListener('timeupdate', updateProgressBar);
+    currentIndex = tracks.findIndex(track => track.preview === previewUrl);
+    if (previewUrl) {
+        currentAudio = new Audio(previewUrl);
+        currentAudio.play();
+        btnPlay.querySelector('ion-icon').setAttribute('name', 'pause-circle');
+        currentAudio.addEventListener('timeupdate', updateProgressBar);
+        updateTrackSelection();
+        document.querySelector('.card__audioplayer--title').innerText = tracks[currentIndex].title;
+        document.querySelector('.card__audioplayer--artist').innerText = tracks[currentIndex].artist.name;
+        document.querySelector('.card-img img').src = tracks[currentIndex].album.cover_medium;
     }
+}
+
+  // aggiorna la riga selezionata nella tabella delle tracce
+  function updateTrackSelection() {
+    tbody.querySelectorAll('tr').forEach((row, index) => {
+      if (index === currentIndex) {
+        row.classList.add('selected-track');
+      } else {
+        row.classList.remove('selected-track');
+      }
+    });
   }
 
   // aggiorna la barra di avanzamento della traccia
   function updateProgressBar() {
-    if (currentAudio && progressBar) {
+    if (currentAudio) {
       const percentage = (currentAudio.currentTime / currentAudio.duration) * 100;
       progressBar.style.width = `${percentage}%`;
     }
   }
+
+  // event listener per la barra di avanzamento della traccia
+  function playNext() {
+    currentIndex = (currentIndex + 1) % tracks.length;
+    playPreview(tracks[currentIndex].preview);
+  }
+
+  function playPrevious() {
+    currentIndex = (currentIndex - 1 + tracks.length) % tracks.length;
+    playPreview(tracks[currentIndex].preview);
+  }
+
+  btnNext.addEventListener('click', playNext);
+  btnPrev.addEventListener('click', playPrevious);
 
   // event listener per il pulsante di riproduzione
   btnPlay.addEventListener('click', () => {
@@ -93,9 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // event listener per la barra di controllo del volume
   volumeControl.addEventListener('input', () => {
-    if(currentAudio) {
-      currentAudio.volume = volumeControl.value / 100;
-    }
+    if(currentAudio) currentAudio.volume = volumeControl.value / 100;
   });
 
   loadAlbumDetails(albumId);
