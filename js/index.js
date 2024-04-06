@@ -40,18 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
             limitedAlbums.forEach(album => {
                 const albumHTML = `
                     <div class="col mb-3">
-                        <div class="card h-100 text-white small
-                        ${row ? 'flex-row g-0 bg--gray' : 'bg--black-light p-3'}">
+                    <a href="./album.html?id=${album.album.id}" class="h-100 d-block text-decoration-none ">
+                        <div class="card h-100 text-white small 
+                        ${row ? 'flex-row g-0 bg--gray' : 'bg--black-light p-0'}">
                             <div class="card-img ${row ? 'w-25' : ''}">
                                 <img src="${album.album.cover_medium}" class="card-img-top w-100 h-100 object-fit-cover 
                                 ${row ? 'rounded-start' : 'rounded'}" alt="${album.album.title}">
                             </div>
-                            <div class="card-body d-flex flex-column justify-content-between ">
-                                <h6 class="card-title">${album.album.title}</h6>
-                                ${row ? '' : `<p class="card-text text-secondary ">${album.artist.name}</p>`}
-                                <a href="./album.html?id=${album.album.id}" class="btn text-black bg--green">View</a>
+                            <div class=" ${row ? 'ps-3 ' : ''}card-body d-flex flex-column justify-content-between p-1 pt-2">
+                                <span class="fw-bold card-title">${album.album.title}</span>
+                                ${row ? '' : `<p class="card-text text-secondary small">${album.artist.name}</p>`}
+                                
                             </div>
                         </div>
+                    </a>    
                     </div>
                 `;
                 section.innerHTML += albumHTML;

@@ -28,6 +28,14 @@
     background-color: var(--black-light);
 }
 
+.bg--black-gradient {
+    background: rgb(16,16,16);
+    background: -moz-linear-gradient(0deg, rgba(16,16,16,1) 65%, rgba(44,44,44,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(16,16,16,1) 65%, rgba(44,44,44,1) 100%);
+    background: linear-gradient(0deg, rgba(16,16,16,1) 65%, rgba(44,44,44,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#101010",endColorstr="#2c2c2c",GradientType=1);
+}
+
 .bg--gray {
     background-color: var(--gray);
 }
@@ -126,6 +134,14 @@ table.table thead {
     font-size: .8rem;
 }
 
+
+.container--album-info {
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(20deg, rgba(0,0,0,1) 34%, rgba(255,255,255,0) 71%);
+    background: -webkit-linear-gradient(20deg, rgba(0,0,0,1) 34%, rgba(255,255,255,0) 71%);
+    background: linear-gradient(20deg, rgba(0,0,0,1) 34%, rgba(255,255,255,0) 71%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+}
 
 
 /* dispositivi mobili (portrait and landscape) */
