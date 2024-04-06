@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       .then(response => response.json())
       .then(album => {
-        document.querySelector(".container--album-info .album-title").innerText = album.title;
+        document.querySelector(".container--album-info--bg-transp .album-title").innerText = album.title;
         document.querySelector(".container--album-pic img").src = album.cover_medium;
         populateTable(album.tracks.data);
       })
