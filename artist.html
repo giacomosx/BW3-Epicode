@@ -75,70 +75,182 @@
             </aside>
             <main class="col-12 col-md-9 col-lg-7 p-0 bg--black-light vh-100 overflow-y-scroll overflow-x-hidden pb-5 ">
                 
-                <div class="spinner-container w-100 justify-content-center  d-flex align-items-center h-75">
+                <!-- togliere la classe d-none dallo spinner  -->
+                <div class="spinner-container w-100 justify-content-center  d-flex align-items-center h-75 d-none ">
                     <div class="spinner-grow" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
                 
-                <section class=" container--album-preview w-100 d-none">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="navbar px-2 ">
-                                <div class="container_btn--navigation">
-                                    <button class="btn fs-2 p-0  "><ion-icon name="chevron-back-circle"></ion-icon></button>
-                                    <button class="btn fs-2 p-0 opacity-75 "><ion-icon name="chevron-forward-circle"></ion-icon></button>
+                <!-- aggiungere classe d-none al container artist-cover -->
+                <section class=" container--artist-cover w-100 card border-0  rounded-0 bg--black-light">
+                    <div class="card-img rounded-0 ">
+                        <img src="https://picsum.photos/1200/800" alt="" class="object-fit-cover w-100 img-fluid ">     
+                    </div>
+                    <div class="bg-black bg-opacity-50 card-img-overlay pb-3 p-0 ">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="navbar px-2 ">
+                                    <div class="container_btn--navigation">
+                                        <button class="btn fs-2 p-0  "><ion-icon name="chevron-back-circle"></ion-icon></button>
+                                        <button class="btn fs-2 p-0 opacity-75 "><ion-icon name="chevron-forward-circle"></ion-icon></button>
+                                    </div>
+                                    <div class="d-none d-md-block  container--profile-pic bg-black rounded-pill px-1  bg-opacity-75 ">
+                                        <img src="https://placebeard.it/640/400" alt="" class="img-fluid rounded-circle profile-pic object-fit-cover ">
+                                        <span class="text-white px-2 username small">SexyUser67</span>
+                                        <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
+                                    </div>
                                 </div>
-                                <div class="d-none d-md-block  container--profile-pic bg-black rounded-pill px-1  bg-opacity-75 ">
-                                    <img src="https://placebeard.it/640/400" alt="" class="img-fluid rounded-circle profile-pic object-fit-cover ">
-                                    <span class="text-white px-2 username small">SexyUser67</span>
-                                    <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
-                                </div>
-                            </div>
-                            <section class="container--album-info--bg-transp d-flex px-3 mt-md-5 pb-3">
-                                <div class="row align-items-center ">
-                                    <div class="col-12 col-md-3 d-flex justify-content-center ">
-                                        <div class="container--album-pic shadow-lg ">
-                                            <img src="./assets/album-provv.png" alt="" class="img-fluid w-100 h-100 object-fit-cover ">
+                                <section class="container--artist-info d-flex  mt-md-5 ps-2">
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <span class="text-white small">Artista verificato</span>
+                                            <h2 class="display-6 text-white fw-bold ">Fast Animals and Slow Kids</h2>
+                                            <span class=" text-white small">120.086 ascoltatori mensili</span>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-9">
-                                        <h2 class="display-4 text-white fw-bold album-title">Gioventù brucata</h2>
-                                    </div>
-                                </div>
-                            </section>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class=" container--trakslist d-none pb-5 ">
+                <!-- aggiungere classe d-none alla trakslist -->
+                <section class=" container--artist-trakslist pb-5 ">
                     <div class="row py-4 px-3">
                         <div class="col-12">
-                            <div class="container__btn--top d-flex align-items-center  gap-3 justify-content-between  flex-row-reverse justify-content-md-start flex-md-row ">
+                            <div class="container__btn--top d-flex align-items-center  gap-4 justify-content-between  flex-row-reverse justify-content-md-start flex-md-row ">
                                 <button class="bg--green btn"><ion-icon class="text-black fs-4 h-100" name="play"></ion-icon></button>
-                                <div class="d-flex align-items-end gap-2">
-                                    <button class="btn text-white p-0"><ion-icon class="fs-4 text-white-50" name="heart-outline"></ion-icon></button>
-                                    <button class="btn text-white p-0"><ion-icon class="fs-4 text-white-50" name="arrow-down-circle-outline"></ion-icon></button>
+                                <div class="d-flex align-items-center  gap-3">
+                                    <button class="btn btn-sm  text-white border-white btn--following fw-bold">FOLLOWING</button>
                                     <button class="btn text-white p-0"><i class="bi bi-three-dots fs-4 text-white-50 "></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <div class="table-responsive">
-                                <table class="table table-borderless table small">
-                                    <thead>
-                                      <tr>
-                                        <th class="text-white-50 fw-light " scope="col">#</th>
-                                        <th class="text-white-50 fw-light " scope="col">TITOLO</th>
-                                        <th class="text-white-50 fw-light " scope="col">RIPRODUZIONI</th>
-                                        <th class="text-white-50 fw-light " scope="col"><ion-icon name="time-outline"></ion-icon></th>
-                                      </tr>
-                                    </thead>
+                        <div class="col-12 col-lg-6 col-xxl-7 order-last order-md-first ">
+                            <h3 class="titleSection text-light m-0 p-3 h5  ">Popolari</h3>
+                            <div class="table-responsive px-2 ">
+                                <table class="table table-borderless table small align-middle ">
                                     <tbody>
-                                      
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-white-50 fw-light" scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
+                                                    <div class="table--img-container">
+                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
+                                                    </div>
+                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
+                                                </div>
+                                            </td>
+                                            <td class="small text-white-50  ">12345</td>
+                                            <td class="small text-white-50 ">2:59</td>
+                                        </tr>
                                     </tbody>
                                   </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xxl-5">
+                            <h3 class="titleSection text-light m-0 p-3 h5 ">Brani che ti piacciono</h3>
+                            <div class="d-flex align-items-center card__favourite rounded-0 border-0 flex-row  g-0 ps-3 ">
+                                <div class="card-img  ">
+                                    <img src="https://picsum.photos/200/300" alt="" class="img-fluid h-100 w-100 object-fit-cover rounded-circle">
+                                </div>
+                                <div class="card-body ps-2 ">
+                                    <div class="m-0 card__favourite--title text-white fw-bold small">Hai messo mi piace a 11 brani </div>
+                                    <div class="m-0 small text-secondary  card__favourite--artist small">Dei Pixies</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,7 +383,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script src="./js/album.js"></script>
+    <!-- <script src="./js/album.js"></script> -->
 </body>
 
 </html>

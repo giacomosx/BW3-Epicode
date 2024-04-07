@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 ${row ? 'rounded-start' : 'rounded'}" alt="${album.album.title}">
                             </div>
                             <div class=" ${row ? 'ps-3 ' : ''}card-body d-flex flex-column justify-content-between p-1 pt-2">
-                                <span class="fw-bold card-title">${album.album.title}</span>
+                                <span class="fw-bold card-title ">${album.album.title}</span>
                                 ${row ? '' : `<p class="card-text text-secondary small">${album.artist.name}</p>`}
                                 
                             </div>

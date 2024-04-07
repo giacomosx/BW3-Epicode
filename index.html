@@ -148,18 +148,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="d-flex justify-content-end gap-4 mt-1">
-                                    <ion-icon name="remove-outline"></ion-icon>
-                                    <ion-icon name="square-outline"></ion-icon>
-                                    <ion-icon name="triangle-outline"></ion-icon>
-                                </div>
                                 <div class="d-flex justify-content-between mt-3">
                                     <div>
                                         <p class="">Attivitá amici</p>
                                     </div>
                                     <div class="d-flex pt-1 gap-2">
-                                        <ion-icon name="people-outline"></ion-icon>
-                                        <ion-icon name="triangle-outline"></ion-icon>
+                                        <i class="bi bi-person-add"></i>
+                                        <i class="bi bi-x-lg"></i>
                                     </div>
                                 </div>
                                 <div>
@@ -193,13 +188,35 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div>xw
                     </div>
                 </section>
             </aside>
         </div>
     </div>
-    <div class="container--audioplayer fixed-bottom px-3 py-2 pb-md-2 pb-5">
+    <div class="container--audioplayer fixed-bottom px-3 py-2 xwpb-md-2">
+        <nav class="navbar navbar--menu d-md-none ">
+            <ul class="nav justify-content-between w-100 px-3 ">
+                <li class="nav-item d-flex">
+                    <a href="./index.html" class="nav-link text-white  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center   ">
+                        <ion-icon class="fs-3  w-100  " name="home-outline"></ion-icon>
+                        <span class="small nav-mobile-label">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a href="./results.html" class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
+                        <ion-icon class="fs-3  w-100  " name="search-sharp"></ion-icon>
+                        <span class="small nav-mobile-label">Cerca</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex">
+                    <a href="./playlists.html" class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
+                        <ion-icon class="fs-3  w-100  " name="library-outline"></ion-icon>
+                        <span class="small nav-mobile-label">La tua libreria</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <div class="row align-items-center ">
             <div class="d-none d-lg-block col-lg-3">
                 <div class="card card__audioplayer rounded-0 border-0 flex-lg-row g-0 align-items-center ">
@@ -239,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="d-none d-lg-block  col-lg-3">
                 <div class="audioplayer__wrapper-btn--settings d-flex align-items-center gap-2 justify-content-end ">
                     <button class="btn p-0 text-secondary  "><i class="bi bi-mic"></i></button>
                     <button class="btn p-0 text-secondary  "><i class="bi bi-menu-button-wide"></i></button>
@@ -248,7 +265,7 @@
                     <div class="progress bg-secondary" role="progressbar">
                         <div class="progress-bar bg-white " style="width: 90%;"></div>
                     </div>
-                    <button class="btn p-0 text-secondary   "><i class="bi bi-arrows-fullscreen"></i></button>
+                    <button class="btn p-0 text-secondary   "><i class="bi bi-arrows-angle-expand"></i></button>
                 </div>
             </div>
         </div>

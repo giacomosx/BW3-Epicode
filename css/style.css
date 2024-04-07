@@ -144,8 +144,35 @@ table.table thead {
 }
 
 
+.container--artist-cover img{
+    max-height: 250px;
+}
+
+.btn--following, .nav-mobile-label {
+    font-size: 0.65rem !important;
+}
+
+
+.table--img-container {
+    height: 40px;
+    width: 40px;
+}
+
+
+.card__favourite .card-img {
+    height:60px;
+    width: 60px;
+}
+
+
 /* dispositivi mobili (portrait and landscape) */
 @media only screen and (max-width: 767px) {
+    
+    .container--audioplayer {
+        border: 0;
+        background: rgb(0,0,0, 0.97);
+    }
+
     .container--album-pic {
         max-width: 200px;
     }
