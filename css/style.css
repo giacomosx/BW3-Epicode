@@ -164,13 +164,49 @@ table.table thead {
     width: 60px;
 }
 
+.container__audioplayer--mobile {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.title__audioplayer--mobile {
+    animation: translateText 5000ms linear infinite;
+    animation-delay: 500ms;
+    white-space: nowrap;
+}
+
+
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+@keyframes translateText {
+    0% {
+        margin-left: 150%;
+    } 
+
+    50% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -150%;
+    }
+
+}
+
+
 
 /* dispositivi mobili (portrait and landscape) */
 @media only screen and (max-width: 767px) {
     
     .container--audioplayer {
         border: 0;
-        background: rgb(0,0,0, 0.97);
+        background: rgb(0,0,0, 0.9);
     }
 
     .container--album-pic {
@@ -239,3 +275,68 @@ table.table thead {
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5c653",endColorstr="#121212",GradientType=1);
     } */
 }
+
+/* Andrea */
+/* player audio su dispositivi mobili */
+/* @media only screen and (max-width: 767px) {
+    .container--audioplayer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1050;
+        background-color: var(--black-light);
+        padding: 5px 10px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+    }
+
+    .navbar--menu {
+        display: none;
+    }
+
+    .audioplayer__wrapper-btn,
+    .audioplayer__wrapper-btn--settings {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn--play,
+    .btn--prev,
+    .btn--next,
+    .btn--shuffle,
+    .btn--repeat {
+        padding: 8px;
+        font-size: 20px;
+        color: var(--green);
+    }
+
+    .card__audioplayer .card-body,
+    .card__audioplayer .card__container--icon,
+    .audioplayer__wrapper-btn--settings > *:not(.btn--volume),
+    .card__audioplayer .card-img {
+        display: none;
+    }
+
+    .btn--volume {
+        display: inline-block;
+    }
+
+    #volumeControl {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+    }
+
+    .btn--volume:focus + #volumeControl,
+    #volumeControl:focus {
+        display: inline-block;
+    }
+
+    .progress {
+        height: 4px;
+        width: calc(100% - 20px);
+        margin: 8px auto;
+    }
+} */

@@ -27,11 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     // per ogni traccia crea un elemento html con link cliccabili, da accompagnare all'eventuale css e allo stile della pagina
                     const trackElement = document.createElement('div');
                     trackElement.classList.add('track', 'text-white');
-                    trackElement.innerHTML = `
-                        <p>
-                            <a href="./artist.html?id=${track.artist.id}" class="text-white">${track.artist.name}</a> - 
-                            <a href="./album.html?id=${track.album.id}" class="text-white">${track.title}</a>
-                        </p>
+                    trackElement.innerHTML = /* HTML */ `
+                    <div class="col">
+                        <div class="card h-100 text-white small bg-transparent ">
+                            <div class="card-img">
+                                <a href="./album.html" class="h-100 w-100 d-block text-decoration-none ">
+                                    <img src="${track.album.cover_medium}" class="rounded w-100 h-100 object-fit-cover" alt="${track.album.title}">
+                                </a>    
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-1 pt-2">
+                                <a href="./artist.html?id=${track.artist.id}" class="text-white text-decoration-none">${track.artist.name}</a>
+                                <a href="./album.html?id=${track.album.id}" class="text-white-50">${track.title}</a>                           
+                            </div>
+                        </div>
+                    </div>
                     `;
                     resultsContainer.appendChild(trackElement);
                 });
