@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0; // indice della traccia corrente
   const tracks = []; // array di tracce dell'artista
 
-  const btnPlay = document.getElementById('btnPlay');
+  const btnPlay = document.querySelectorAll('.btnPlay');
   const btnNext = document.querySelector('.btn--next'); // pulsante per la traccia successiva
   const btnPrev = document.querySelector('.btn--prev'); // pulsante per la traccia precedente
   const volumeControl = document.getElementById('volumeControl');
@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (previewUrl) {
         currentAudio = new Audio(previewUrl);
         currentAudio.play();
-        btnPlay.querySelector('ion-icon').setAttribute('name', 'pause-circle');
+        document.querySelector('.container__audioplayer--mobile').classList.remove('d-none')
+        document.querySelector('#btnPlayDesk').setAttribute('name', 'pause-circle');
+        document.querySelector('#btnPlayMobile').setAttribute('name', 'pause');
         currentAudio.addEventListener('timeupdate', updateProgressBar);
         document.querySelector('.card__audioplayer--title').innerText = tracks[currentIndex].title;
         document.querySelector('.card__audioplayer--artist').innerText = tracks[currentIndex].artist.name;
@@ -123,19 +125,23 @@ function playNext() {
     }
   }
 
-  btnPlay.addEventListener('click', () => {
-    if (currentAudio) {
-      if (!currentAudio.paused) {
-        currentAudio.pause();
-        btnPlay.querySelector('ion-icon').setAttribute('name', 'play-circle');
-      } else {
-        currentAudio.play();
-        btnPlay.querySelector('ion-icon').setAttribute('name', 'pause-circle');
+  btnPlay.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentAudio) {
+        if (!currentAudio.paused) {
+          currentAudio.pause();
+          btn.querySelector('ion-icon').setAttribute('name', 'play-circle');
+          document.querySelector('#btnPlayMobile').setAttribute('name', 'play');
+        } else {
+          currentAudio.play();
+          btn.querySelector('ion-icon').setAttribute('name', 'pause-circle');
+          document.querySelector('#btnPlayMobile').setAttribute('name', 'pause');
+        }
+      } else if (currentPreviewUrl) {
+        playPreview(currentPreviewUrl);
       }
-    } else if (currentPreviewUrl) {
-      playPreview(currentPreviewUrl);
-    }
-  });
+    });
+  })
 
   volumeControl.addEventListener('input', () => {
     if(currentAudio) currentAudio.volume = volumeControl.value / 100;
