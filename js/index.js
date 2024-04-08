@@ -38,22 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
   
             const limitedAlbums = data.data.slice(0, 8); // limite album visualizzati
             limitedAlbums.forEach(album => {
-                const albumHTML = `
-                    <div class="col mb-3">
-                    <a href="./album.html?id=${album.album.id}" class="h-100 d-block text-decoration-none ">
+                const albumHTML = /* HTML */ `
+                    <div class="col">
                         <div class="card h-100 text-white small 
                         ${row ? 'flex-row g-0 bg--gray' : 'bg--black-light p-0'}">
                             <div class="card-img ${row ? 'w-25' : ''}">
-                                <img src="${album.album.cover_medium}" class="card-img-top w-100 h-100 object-fit-cover 
-                                ${row ? 'rounded-start' : 'rounded'}" alt="${album.album.title}">
+                                <a href="./album.html?id=${album.album.id}" class="h-100 d-block text-decoration-none ">
+                                    <img src="${album.album.cover_medium}" class="card-img-top w-100 h-100 object-fit-cover 
+                                    ${row ? 'rounded-start' : 'rounded'}" alt="${album.album.title}">
+                                </a>    
                             </div>
                             <div class=" ${row ? 'ps-3 ' : ''}card-body d-flex flex-column justify-content-between p-1 pt-2">
-                                <span class="fw-bold card-title ">${album.album.title}</span>
-                                ${row ? '' : `<p class="card-text text-secondary small">${album.artist.name}</p>`}
+                                <a href="./album.html?id=${album.album.id}" class="h-100 text-white d-block text-decoration-none ">
+                                    <span class="fw-bold card-title ">${album.album.title}</span>
+                                </a>
+                                ${row ? '' : `<a href="./artist.html?id=${album.artist.id}" class="card-text text-secondary small">${album.artist.name}</a>`}
                                 
                             </div>
                         </div>
-                    </a>    
                     </div>
                 `;
                 section.innerHTML += albumHTML;

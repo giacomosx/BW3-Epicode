@@ -74,16 +74,12 @@
                 </nav>
             </aside>
             <main class="col-12 col-md-9 col-lg-7 p-0 bg--black-light vh-100 overflow-y-scroll overflow-x-hidden pb-5 ">
-                
-                <!-- togliere la classe d-none dallo spinner  -->
-                <div class="spinner-container w-100 justify-content-center  d-flex align-items-center h-75 d-none ">
+                <div class="spinner-container w-100 justify-content-center  d-flex align-items-center h-75">
                     <div class="spinner-grow" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
-                
-                <!-- aggiungere classe d-none al container artist-cover -->
-                <section class=" container--artist-cover w-100 card border-0  rounded-0 bg--black-light">
+                <section class=" container--artist-cover w-100 card border-0  rounded-0 bg--black-light d-none ">
                     <div class="card-img rounded-0 ">
                         <img src="https://picsum.photos/1200/800" alt="" class="object-fit-cover w-100 img-fluid ">     
                     </div>
@@ -101,7 +97,7 @@
                                         <button class="btn dropdown-toggle text-white fs-4 p-0 pe-1  "></button>
                                     </div>
                                 </div>
-                                <section class="container--artist-info d-flex  mt-md-5 ps-2">
+                                <section class="container--artist-info d-flex  mt-5 ps-2">
                                     <div class="row ">
                                         <div class="col-12 ">
                                             <span class="text-white small">Artista verificato</span>
@@ -114,12 +110,14 @@
                         </div>
                     </div>
                 </section>
-                <!-- aggiungere classe d-none alla trakslist -->
-                <section class=" container--artist-trakslist pb-5 ">
+                <section class=" container--artist-trakslist pb-5 d-none ">
                     <div class="row py-4 px-3">
                         <div class="col-12">
                             <div class="container__btn--top d-flex align-items-center  gap-4 justify-content-between  flex-row-reverse justify-content-md-start flex-md-row ">
-                                <button class="bg--green btn"><ion-icon class="text-black fs-4 h-100" name="play"></ion-icon></button>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn--shuffle d-md-none "><ion-icon class="fs-2 text--green" name="shuffle-outline"></ion-icon></button>
+                                    <button class="bg--green btn"><ion-icon class="text-black fs-4 h-100" name="play"></ion-icon></button>
+                                </div>
                                 <div class="d-flex align-items-center  gap-3">
                                     <button class="btn btn-sm  text-white border-white btn--following fw-bold">FOLLOWING</button>
                                     <button class="btn text-white p-0"><i class="bi bi-three-dots fs-4 text-white-50 "></i></button>
@@ -146,97 +144,7 @@
                                             <td class="small text-white-50  ">12345</td>
                                             <td class="small text-white-50 ">2:59</td>
                                         </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-white-50 fw-light" scope="row">1</th>
-                                            <td>
-                                                <div class="d-flex g-0 align-items-center flex-row w-100  ">
-                                                    <div class="table--img-container">
-                                                        <img src="https://picsum.photos/200/300" alt="" class="img-fluid object-fit-cover w-100 h-100 ">
-                                                    </div>
-                                                    <span class="table--title-song small fw-bold ps-2 ">Titolo</span>
-                                                </div>
-                                            </td>
-                                            <td class="small text-white-50  ">12345</td>
-                                            <td class="small text-white-50 ">2:59</td>
-                                        </tr>
+                                        
                                     </tbody>
                                   </table>
                             </div>
@@ -307,30 +215,45 @@
             </aside>
         </div>
     </div>
-    <div class="container--audioplayer fixed-bottom px-3 py-2 pb-md-2">
-        <nav class="navbar navbar--menu d-md-none ">
-            <ul class="nav justify-content-between w-100 px-3 ">
+    <div class=" fixed-bottom p-0  px-md-3 pt-md-2 ">
+        <div class="container__audioplayer--mobile d-md-none ">
+            <div class="row rounded bg--gray py-2 align-items-center px-3">
+                <div class=" col-8 text-white overflow-hidden small text-nowrap ">
+                    <span class="title__audioplayer--mobile fw-bold ">Titolo lunghissimissimooooo - Artista con nome lungo</span>
+                </div>
+                <div class="col-4 buttons__audioplayer--mobile d-flex justify-content-between align-items-center g-1 ">
+                    <button class="btn p-0 text-white-50 "><i class="fs-3 bi bi-speaker"></i></button>
+                    <button class="btn p-0 text-white pt-1  "><ion-icon class="fs-1 " name="heart-outline"></ion-icon></button>
+                    <button class="btn p-0 btn--play text-white pt-1 "><ion-icon class="fs-1 " name="play"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar--menu d-md-none container--audioplayer w-100 ">
+            <ul class="nav justify-content-between w-100 px-4 pb-2 ">
                 <li class="nav-item d-flex">
-                    <a href="./index.html" class="nav-link text-white  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center   ">
+                    <a href="./index.html"
+                        class="nav-link text-white  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center   ">
                         <ion-icon class="fs-3  w-100  " name="home-outline"></ion-icon>
                         <span class="small nav-mobile-label">Home</span>
                     </a>
                 </li>
                 <li class="nav-item d-flex">
-                    <a href="./results.html" class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
+                    <a href="./results.html"
+                        class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
                         <ion-icon class="fs-3  w-100  " name="search-sharp"></ion-icon>
                         <span class="small nav-mobile-label">Cerca</span>
                     </a>
                 </li>
                 <li class="nav-item d-flex">
-                    <a href="./playlists.html" class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
+                    <a href="./playlists.html"
+                        class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
                         <ion-icon class="fs-3  w-100  " name="library-outline"></ion-icon>
                         <span class="small nav-mobile-label">La tua libreria</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="row align-items-center ">
+        <div class="row align-items-center container--audioplayer">
             <div class="d-none d-lg-block col-lg-3">
                 <div class="card card__audioplayer rounded-0 border-0 flex-lg-row g-0 align-items-center ">
                     <div class="card-img">
@@ -352,7 +275,7 @@
                         <button class="btn p-0 btn--prev"><ion-icon class="fs-4 text-white-50 " name="play-skip-back"></ion-icon></button>
                         
                         <!-- pulsante Play con ID btnPlay -->
-                        <button id="btnPlay" class="btn p-0 btn--play"><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
+                        <button id="btnPlay" class="btn p-0 btn--play "><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
                         
                         <button class="btn p-0 btn--next"><ion-icon class="fs-4 text-white-50  " name="play-skip-forward"></ion-icon></button>
                         <button class="btn p-0 btn--repeat"><ion-icon class="fs-4 text--green" name="repeat-outline"></ion-icon></button>
@@ -373,7 +296,7 @@
                     <input type="range" id="volumeControl" class="form-range" min="0" max="100" value="90" style="width: 100px;">
                     <button class="btn p-0 text-secondary "><i class="bi bi-arrows-angle-expand"></i></button>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

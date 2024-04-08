@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
       .then(response => response.json())
       .then(artist => {
-        document.querySelector(".container--artist-cover img").src = artist.picture_medium;
+        document.querySelector(".container--artist-cover img").src = artist.picture_xl;
         document.querySelector(".container--artist-info .display-6").innerText = artist.name;
         document.querySelector(".container--artist-info .small").innerText = `${artist.nb_fan} fans`;
         loadArtistTracks(artistId);

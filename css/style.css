@@ -164,13 +164,48 @@ table.table thead {
     width: 60px;
 }
 
+.container__audioplayer--mobile {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.title__audioplayer--mobile {
+    animation: translateText 5000ms linear infinite;
+    white-space: nowrap;
+}
+
+
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+@keyframes translateText {
+    0% {
+        margin-left: 200%;
+    } 
+
+    50% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -250%;
+    }
+
+}
+
+
 
 /* dispositivi mobili (portrait and landscape) */
 @media only screen and (max-width: 767px) {
     
     .container--audioplayer {
         border: 0;
-        background: rgb(0,0,0, 0.97);
+        background: rgb(0,0,0, 0.9);
     }
 
     .container--album-pic {
@@ -242,7 +277,7 @@ table.table thead {
 
 /* Andrea */
 /* player audio su dispositivi mobili */
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
     .container--audioplayer {
         position: fixed;
         bottom: 0;
@@ -303,4 +338,4 @@ table.table thead {
         width: calc(100% - 20px);
         margin: 8px auto;
     }
-}
+} */
