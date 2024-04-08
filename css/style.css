@@ -171,6 +171,7 @@ table.table thead {
 
 .title__audioplayer--mobile {
     animation: translateText 5000ms linear infinite;
+    animation-delay: 500ms;
     white-space: nowrap;
 }
 
@@ -185,7 +186,7 @@ table.table thead {
 
 @keyframes translateText {
     0% {
-        margin-left: 200%;
+        margin-left: 150%;
     } 
 
     50% {
@@ -193,7 +194,7 @@ table.table thead {
     }
 
     100% {
-        margin-left: -250%;
+        margin-left: -150%;
     }
 
 }

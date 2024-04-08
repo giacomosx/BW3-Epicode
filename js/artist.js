@@ -56,8 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="table--title-song small fw-bold ps-2 ">${track.title}</span>
                 </div>
             </td>
-            <td class="small text-white-50  ">${track.rank}</td>
-            <td class="small text-white-50 ">${(track.duration / 60).toFixed(2)}</td>
+            <td class="small text-white-50  d-none d-md-table-cell">${track.rank}</td>
+            <td class="small text-white-50 d-none d-md-table-cell ">${(track.duration / 60).toFixed(2)}</td>
+            <td class="small text-white-50 d-md-none"><button class="btn text-white p-0"><i class="bi bi-three-dots-vertical fs-4 text-white-50 "></i></button></td>
           `;
           tbody.appendChild(tr);
         });
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentAudio.addEventListener('timeupdate', updateProgressBar);
         document.querySelector('.card__audioplayer--title').innerText = tracks[currentIndex].title;
         document.querySelector('.card__audioplayer--artist').innerText = tracks[currentIndex].artist.name;
+        document.querySelector('.title__audioplayer--mobile').innerText = tracks[currentIndex].title + ', ' +tracks[currentIndex].artist.name ;
         document.querySelector('.card-img img').src = tracks[currentIndex].album.cover_medium;
         updateTrackSelection();
     }
