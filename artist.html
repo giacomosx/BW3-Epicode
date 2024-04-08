@@ -27,7 +27,7 @@
                             <a href="./results.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="search-sharp"></ion-icon>Cerca</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./playlists.html" class="nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="library-outline"></ion-icon>La tua libreria</a>
+                            <a href="./playlists.html" class="disabled nav-link link-secondary fw-medium  icon-link  "><ion-icon class="pe-3 fs-4 " name="library-outline"></ion-icon>La tua libreria</a>
                         </li>
                     </ul>
                 </nav>
@@ -100,9 +100,8 @@
                                 <section class="container--artist-info d-flex  mt-5 ps-2">
                                     <div class="row ">
                                         <div class="col-12 ">
-                                            <span class="text-white small">Artista verificato</span>
+                                            <span class="text-white small mt-5 pt-3 d-block ">Artista verificato</span>
                                             <h2 class="display-6 text-white fw-bold ">Fast Animals and Slow Kids</h2>
-                                            <span class=" text-white small">120.086 ascoltatori mensili</span>
                                         </div>
                                     </div>
                                 </section>
@@ -116,7 +115,7 @@
                             <div class="container__btn--top d-flex align-items-center  gap-4 justify-content-between  flex-row-reverse justify-content-md-start flex-md-row ">
                                 <div class="d-flex gap-2">
                                     <button class="btn btn--shuffle d-md-none "><ion-icon class="fs-2 text--green" name="shuffle-outline"></ion-icon></button>
-                                    <button class="bg--green btn"><ion-icon class="text-black fs-4 h-100" name="play"></ion-icon></button>
+                                    <button class="bg--green btn text-black "><ion-icon class="fs-4 h-100" name="play"></ion-icon></button>
                                 </div>
                                 <div class="d-flex align-items-center  gap-3">
                                     <button class="btn btn-sm  text-white border-white btn--following fw-bold">FOLLOWING</button>
@@ -128,7 +127,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 col-xxl-7 order-last order-md-first ">
                             <h3 class="titleSection text-light m-0 p-3 h5  ">Popolari</h3>
-                            <div class="table-responsive px-2 ">
+                            <div class="table-responsive px-2 overflow-x-hidden  ">
                                 <table class="table table-borderless table small align-middle ">
                                     <tbody>
                                         <tr>
@@ -216,7 +215,7 @@
         </div>
     </div>
     <div class=" fixed-bottom p-0  px-md-3 pt-md-2 ">
-        <div class="container__audioplayer--mobile d-md-none ">
+        <div class="container__audioplayer--mobile d-none d-md-none ">
             <div class="row rounded bg--gray py-2 align-items-center px-3">
                 <div class=" col-8 text-white overflow-hidden small text-nowrap ">
                     <span class="title__audioplayer--mobile fw-bold "></span>
@@ -224,7 +223,7 @@
                 <div class="col-4 buttons__audioplayer--mobile d-flex justify-content-between align-items-center g-1 ">
                     <button class="btn p-0 text-white-50 "><i class="fs-3 bi bi-speaker"></i></button>
                     <button class="btn p-0 text-white pt-1  "><ion-icon class="fs-1 " name="heart-outline"></ion-icon></button>
-                    <button class="btn p-0 btn--play text-white pt-1 "><ion-icon class="fs-1 " name="play"></ion-icon></button>
+                    <button class="btn p-0 btn--play text-white pt-1 btnPlay"><ion-icon id="btnPlayMobile" class="fs-1 " name="play"></ion-icon></button>
                 </div>
             </div>
         </div>
@@ -246,7 +245,7 @@
                 </li>
                 <li class="nav-item d-flex">
                     <a href="./playlists.html"
-                        class="nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
+                        class="disabled  nav-link text-white-50  fw-medium  icon-link d-flex flex-column align-items-center justify-content-center    ">
                         <ion-icon class="fs-3  w-100  " name="library-outline"></ion-icon>
                         <span class="small nav-mobile-label">La tua libreria</span>
                     </a>
@@ -275,7 +274,7 @@
                         <button class="btn p-0 btn--prev"><ion-icon class="fs-4 text-white-50 " name="play-skip-back"></ion-icon></button>
                         
                         <!-- pulsante Play con ID btnPlay -->
-                        <button id="btnPlay" class="btn p-0 btn--play "><ion-icon class="text-white display-4 " name="play-circle"></ion-icon></button>
+                        <button class="btn p-0 btn--play btnPlay"><ion-icon id="btnPlayDesk" class="text-white display-4 " name="play-circle"></ion-icon></button>
                         
                         <button class="btn p-0 btn--next"><ion-icon class="fs-4 text-white-50  " name="play-skip-forward"></ion-icon></button>
                         <button class="btn p-0 btn--repeat"><ion-icon class="fs-4 text--green" name="repeat-outline"></ion-icon></button>
@@ -307,7 +306,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="./js/artist.js"></script>
-    <script src="./js/results.js"></script>
+    <!-- <script src="./js/results.js"></script> -->
 </body>
 
 </html>

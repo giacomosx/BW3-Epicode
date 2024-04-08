@@ -184,6 +184,13 @@ table.table thead {
 }
 
 
+button.bg--green:hover {
+    color: var(--green) !important;
+    border: 1px solid var(--green);
+    background-color: var(--black);
+}
+
+
 @keyframes translateText {
     0% {
         margin-left: 150%;
